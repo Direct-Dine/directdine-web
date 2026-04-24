@@ -255,7 +255,7 @@ nav.scrolled {
 }
 
 /* --- HERO SECTION --- */
-#hero {
+#hero{
     position: relative;
     min-height: 100vh;
     background: url('final.jpg') no-repeat center center / cover;
@@ -265,7 +265,7 @@ nav.scrolled {
     overflow: hidden;
 }
 
-#hero-section::after {
+#hero::after {
     content: "";
     position: absolute;
     inset: 0;
