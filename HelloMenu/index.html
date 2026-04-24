@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[RESTAURANT_NAME] – Premium Highway Kitchen in [CITY]</title>
+  <meta name="description" content="[RESTAURANT_NAME] – Best food, hygienic kitchen, open 24x7 in [CITY].">
+  <meta name="theme-color" content="#D84315">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader">
+  <div class="lw"><span>[RESTAURANT]</span></div>
+  <div class="lw"><span>[NAME] ★</span></div>
+  <div class="l-bar"></div>
+  <div class="l-txt">Preparing your experience…</div>
+</div>
+
+<div class="mob-ov" id="mobMenu">
+  <a href="#about" onclick="closeMob()">About</a>
+  <div class="mob-div"></div>
+  <a href="#menu" onclick="closeMob()">Menu</a>
+  <div class="mob-div"></div>
+  <a href="#gallery" onclick="closeMob()">Gallery</a>
+  <div class="mob-div"></div>
+  <a href="#location" onclick="closeMob()">Location</a>
+</div>
+
+<header id="nav">
+  <a href="#" class="nav-logo"><span class="logo-star">★</span> [RESTAURANT_NAME]</a>
+  <nav class="nav-mid">
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#location">Location</a>
+  </nav>
+  <div class="nav-r">
+    <a href="https://wa.me/919999999999" target="_blank" class="nav-wa">💬 WhatsApp</a>
+    <button class="ham" id="ham" onclick="toggleMob()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="h-bg">
+    <div class="h-bokeh">
+      <div class="bk" style="width:220px;height:220px;top:8%;left:12%;animation-duration:8s;background:radial-gradient(circle,var(--saffron),transparent 70%)"></div>
+      <div class="bk" style="width:160px;height:160px;top:55%;left:68%;animation-duration:11s;animation-delay:2s;background:radial-gradient(circle,var(--clay),transparent 70%)"></div>
+    </div>
+  </div>
+
+  <div class="food-floats">
+    <div class="ff" style="--fs:5.5rem;--dur:8s;--del:0s;--op:.8;--r:-12deg;top:10%;left:63%">🍛</div>
+    <div class="ff" style="--fs:3.5rem;--dur:10s;--del:1.5s;--op:.7;--r:8deg;top:22%;left:77%">🫓</div>
+    <div class="ff" style="--fs:4.5rem;--dur:9s;--del:.8s;--op:.8;--r:-6deg;top:58%;left:59%">🔥</div>
+    <div class="ff" style="--fs:3rem;--dur:11s;--del:2.5s;--op:.6;--r:15deg;top:73%;left:78%">☕</div>
+    <div class="ff" style="--fs:3.5rem;--dur:7.5s;--del:3s;--op:.6;--r:-10deg;top:13%;left:82%">🥛</div>
+    <div class="ff" style="--fs:2.5rem;--dur:12s;--del:.3s;--op:.5;--r:5deg;top:44%;left:69%">🌶️</div>
+    <div class="ff" style="--fs:4rem;--dur:9.5s;--del:4s;--op:.7;--r:-18deg;top:78%;left:53%">🍜</div>
+  </div>
+
+  <span class="h-side">[RESTAURANT_NAME] · [LOCATION] · [CITY] · Open 24×7</span>
+
+  <div class="h-inner">
+    <div class="h-kicker"><span class="kl"></span>Premium Highway Kitchen · [LOCATION]</div>
+    <h1 class="h-h1">
+      <span class="ln l1">Where the</span>
+      <span class="ln l2">Highway</span>
+      <span class="ln l3">Meets Flavour</span>
+    </h1>
+    <p class="h-sub">A modern multi-cuisine restaurant built for the traveller. Fresh food, proud craft, and the warmth of a home — every hour, every day.</p>
+    <div class="h-btns">
+      <a href="#menu" class="btn-c">Explore Our Menu →</a>
+      <a href="#about" class="btn-g">Our Story</a>
+    </div>
+  </div>
+
+  <div class="h-plate">
+    <div class="h-ring"></div>
+    <div class="h-ring2"></div>
+    <div class="h-big">🍽️</div>
+  </div>
+
+  <div class="h-stats">
+    <div class="hs"><span class="hs-n">24×7</span><span class="hs-l">Always Open</span></div>
+    <div class="hs"><span class="hs-n">8+</span><span class="hs-l">Cuisines</span></div>
+    <div class="hs"><span class="hs-n">500+</span><span class="hs-l">Daily Guests</span></div>
+  </div>
+
+  <div class="h-scroll"><div class="sl"></div><span class="st">Scroll to explore</span></div>
+</section>
+
+<section id="about">
+  <div class="about-grid">
+    <div class="a-vis sr-l">
+      <div class="a-main">
+        <div class="a-emoji">🏨</div>
+        <div class="a-vtagline">Every journey deserves a <em>great meal</em> at its heart</div>
+      </div>
+      <div class="a-corner">
+        <span class="ac-n">24×7</span>
+        <span class="ac-l">Never Closed</span>
+      </div>
+      <div class="a-year">Since Day One</div>
+    </div>
+    <div class="sr-r">
+      <span class="a-overline">Our Story</span>
+      <h2 class="a-h2">More than a <strong>stop</strong> on<br>the road. It's a <strong>destination.</strong></h2>
+      <p class="a-p">Perched on the legendary [HIGHWAY/ROAD] — [RESTAURANT_NAME] was built on one belief: that highway food deserves the same care, quality, and pride as any restaurant in the city.</p>
+      <p class="a-p">We serve truckers who make us their daily ritual, families on weekend road trips, and city-dwellers who come just for the food. Our kitchen runs 24 hours a day, 365 days a year.</p>
+      <div class="a-divider"></div>
+      <div class="a-vals">
+        <div class="av"><span class="av-ico">🛡️</span><div><div class="av-t">FSSAI Certified</div><div class="av-d">Food safety by the book</div></div></div>
+        <div class="av"><span class="av-ico">🧑‍🍳</span><div><div class="av-t">Expert Chefs</div><div class="av-d">10+ years each, minimum</div></div></div>
+        <div class="av"><span class="av-ico">🚛</span><div><div class="av-t">Ample Parking</div><div class="av-d">Parking for all vehicle sizes</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="menu-hdr sr">
+    <div>
+      <p class="section-kicker">Our Menu</p>
+      <h2 class="menu-h2">Crafted with <em>passion,</em><br>served with pride</h2>
+    </div>
+  </div>
+  <div class="menu-tabs sr" style="transition-delay:.1s">
+    <button class="mt active" data-f="all">All Items</button>
+    <button class="mt" data-f="north">North Indian</button>
+    <button class="mt" data-f="tandoor">Tandoor</button>
+    <button class="mt" data-f="chinese">Chinese</button>
+  </div>
+  <div class="menu-grid sr" id="mg" style="transition-delay:.2s">
+    <div class="mc" data-c="north"><div class="mc-thumb" style="background:linear-gradient(135deg,#FFE0B2,#FFB74D)">🍛</div><div class="mc-body"><p class="mc-cat">North Indian</p><h3 class="mc-name">Dal Makhani</h3><p class="mc-desc">Black lentils slow-cooked overnight in tomato, cream & butter. Rich, silky, unforgettable.</p><div class="mc-ft"><span class="mc-price">₹220</span><div class="mc-tags"><span class="mc-tag hit">⭐ Bestseller</span><div class="mc-dot v"></div></div></div></div></div>
+    <div class="mc" data-c="north"><div class="mc-thumb" style="background:linear-gradient(135deg,#FFCC80,#FFA726)">🧆</div><div class="mc-body"><p class="mc-cat">North Indian</p><h3 class="mc-name">Paneer Butter Masala</h3><p class="mc-desc">Silken cottage cheese in a velvety tomato-cashew gravy with whole Indian spices.</p><div class="mc-ft"><span class="mc-price">₹280</span><div class="mc-tags"><span class="mc-tag hit">⭐ Bestseller</span><div class="mc-dot v"></div></div></div></div></div>
+    <div class="mc" data-c="north"><div class="mc-thumb" style="background:linear-gradient(135deg,#F5DEB3,#D2B48C)">🍲</div><div class="mc-body"><p class="mc-cat">North Indian</p><h3 class="mc-name">Dum Biryani</h3><p class="mc-desc">Long grain basmati rice layered with vegetables and aromatic saffron, slow-cooked in a sealed pot.</p><div class="mc-ft"><span class="mc-price">₹250</span><div class="mc-tags"><span class="mc-tag">Chef Special</span><div class="mc-dot v"></div></div></div></div></div>
+    <div class="mc" data-c="tandoor"><div class="mc-thumb" style="background:linear-gradient(135deg,#FFAB91,#FF7043)">🔥</div><div class="mc-body"><p class="mc-cat">Tandoor</p><h3 class="mc-name">Chicken Tikka</h3><p class="mc-desc">Marinated in hung curd & spices, charred to perfection in our live clay tandoor.</p><div class="mc-ft"><span class="mc-price">₹350</span><div class="mc-tags"><span class="mc-tag hit">⭐ Most Loved</span><div class="mc-dot nv"></div></div></div></div></div>
+    <div class="mc" data-c="tandoor"><div class="mc-thumb" style="background:linear-gradient(135deg,#FFCCBC,#FF8A65)">🫓</div><div class="mc-body"><p class="mc-cat">Tandoor</p><h3 class="mc-name">Garlic Butter Naan</h3><p class="mc-desc">Hand-tossed bread topped with roasted garlic and fresh coriander, brushed with desi ghee.</p><div class="mc-ft"><span class="mc-price">₹65</span><div class="mc-tags"><span class="mc-tag">Fresh Baked</span><div class="mc-dot v"></div></div></div></div></div>
+    <div class="mc" data-c="chinese"><div class="mc-thumb" style="background:linear-gradient(135deg,#C8E6C9,#81C784)">🍜</div><div class="mc-body"><p class="mc-cat">Chinese</p><h3 class="mc-name">Veg Hakka Noodles</h3><p class="mc-desc">Wok-tossed noodles with crisp seasonal vegetables in a savory dark soy sauce.</p><div class="mc-ft"><span class="mc-price">₹180</span><div class="mc-tags"><span class="mc-tag hit">⭐ Top Pick</span><div class="mc-dot v"></div></div></div></div></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="gal-hdr sr">
+    <div>
+      <p class="section-kicker">Gallery</p>
+      <h2 class="gal-h2">A feast <em>for the eyes</em></h2>
+    </div>
+    <span class="gal-hint">Click any photo to expand</span>
+  </div>
+  <div class="bento sr" style="transition-delay:.15s">
+    <div class="gb gb1" style="background:linear-gradient(145deg,#FFF3E0,#FFE0B2)" onclick="openLb('🍛','Dal Makhani — slow cooked, soul food')">🍛<div class="gbo"><div class="gbo-i">🔍</div><div class="gbo-l">Dal Makhani</div></div></div>
+    <div class="gb gb2" style="background:linear-gradient(145deg,#E8F5E9,#C8E6C9)" onclick="openLb('🍜','Wok-fresh Chinese — noodles tossed to order')">🍜<div class="gbo"><div class="gbo-i">🔍</div><div class="gbo-l">Hakka Noodles</div></div></div>
+    <div class="gb gb3" style="background:linear-gradient(145deg,#EFEBE9,#D7CCC8)" onclick="openLb('☕','Masala Chai — the highway ritual')">☕<div class="gbo"><div class="gbo-i">🔍</div><div class="gbo-l">Masala Chai</div></div></div>
+    <div class="gb gb4" style="background:linear-gradient(145deg,#FBE9E7,#FFCCBC)" onclick="openLb('🔥','Live Tandoor — fired up 24 hours')">🔥<div class="gbo"><div class="gbo-i">🔍</div><div class="gbo-l">Live Tandoor</div></div></div>
+    <div class="gb gb5" style="background:linear-gradient(145deg,#FFF8E1,#FFECB3)" onclick="openLb('🥞','Masala Dosa — crispy golden perfection')">🥞<div class="gbo"><div class="gbo-i">🔍</div><div class="gbo-l">Masala Dosa</div></div></div>
+    <div class="gb gb6" style="background:linear-gradient(145deg,#FCE4EC,#F8BBD0)" onclick="openLb('🥛','Rose Lassi — thick, cold, kulhad-chilled')">🥛<div class="gbo"><div class="gbo-i">🔍</div><div class="gbo-l">Rose Lassi</div></div></div>
+    <div class="gb gb7" style="background:linear-gradient(145deg,#E3F2FD,#BBDEFB)" onclick="openLb('🌄','[LOCATION] — the highway we call home')">🌄<div class="gbo"><div class="gbo-i">🔍</div><div class="gbo-l">The Highway</div></div></div>
+    <div class="gb gb8" style="background:linear-gradient(145deg,#FAFAFA,#F5F5F5)" onclick="openLb('👨‍🍳','Our chefs — passion on every plate')">👨‍🍳<div class="gbo"><div class="gbo-i">🔍</div><div class="gbo-l">Chefs at Work</div></div></div>
+  </div>
+</section>
+
+<div id="lb" onclick="closeLb()">
+  <div class="lb-inner" onclick="event.stopPropagation()">
+    <div class="lb-big" id="lbE">🍛</div>
+    <p class="lb-cap" id="lbC">Caption</p>
+  </div>
+  <div class="lb-x" onclick="closeLb()">✕</div>
+</div>
+
+<div class="cta-band">
+  <div class="cta-bi">
+    <div><h3 class="cta-h3">Hungry? We're <em>always</em> ready.</h3><p class="cta-sub">[LOCATION], [CITY] — look for the ★ sign</p></div>
+    <div class="cta-btns">
+      <a href="https://wa.me/919999999999" target="_blank" class="cta-w">💬 WhatsApp Us</a>
+      <a href="tel:+919999999999" class="cta-d">📞 Call Now</a>
+    </div>
+  </div>
+</div>
+
+<section id="location">
+  <div class="loc-grid">
+    <div class="sr-l">
+      <p class="section-kicker">Find Us</p>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.9rem,3.8vw,3rem);font-weight:300;line-height:1.1;letter-spacing:-.02em;margin-bottom:28px;color:var(--cream);">You're just <strong>minutes away</strong><br>from a great meal</h2>
+      <div class="map-box">
+        <div class="map-pin">📍</div>
+        <div class="map-addr">[FULL ADDRESS LINE 1]<br>[CITY, STATE, ZIP]</div>
+        <a href="https://maps.google.com/?q=Neelkanth+Star+Restaurant+Murthal+Sonipat" target="_blank" class="map-gm">Open in Google Maps →</a>
+      </div>
+    </div>
+    <div class="sr-r">
+      <h3 class="loc-h3">Contact & <strong>Hours</strong></h3>
+      <div class="li"><div class="li-icon">⏰</div><div><div class="li-lbl">Hours</div><div class="li-val"><span class="open-pill"><span class="op-d"></span> Open 24×7 · Every Day</span></div></div></div>
+      <div class="li"><div class="li-icon">📞</div><div><div class="li-lbl">Phone</div><div class="li-val"><a href="tel:+919999999999">+91 99999 99999</a></div></div></div>
+      <div class="li"><div class="li-icon">💬</div><div><div class="li-lbl">WhatsApp</div><div class="li-val"><a href="https://wa.me/919999999999">Chat with us directly</a></div></div></div>
+      <div class="li"><div class="li-icon">📍</div><div><div class="li-lbl">Address</div><div class="li-val" style="font-size:.9rem">[FULL ADDRESS LINE 1],<br>[CITY, STATE, ZIP]</div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-top">
+    <div>
+      <div class="ft-logo"><span class="logo-star">★</span> [RESTAURANT_NAME]</div>
+      <p class="ft-tag">A premium multi-cuisine restaurant & highway kitchen in [CITY]. Open 24×7, serving happiness one plate at a time.</p>
+    </div>
+    <div><h4 class="ft-ch">Navigate</h4><ul class="ft-col"><li><a href="#about">About Us</a></li><li><a href="#menu">Menu</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#location">Location</a></li></ul></div>
+    <div><h4 class="ft-ch">Cuisines</h4><ul class="ft-col"><li><a href="#menu">North Indian</a></li><li><a href="#menu">Tandoor Specials</a></li><li><a href="#menu">Chinese</a></li></ul></div>
+    <div><h4 class="ft-ch">Contact</h4><ul class="ft-col"><li><a href="tel:+919999999999">+91 99999 99999</a></li><li><a href="https://wa.me/919999999999">WhatsApp Chat</a></li><li style="font-size:.76rem;color:rgba(25,25,25,.5);line-height:1.7;margin-top:4px">[FULL ADDRESS]<br>[CITY]</li></ul></div>
+  </div>
+  <div class="ft-bot">
+    <p class="ft-cp">© 2025 [RESTAURANT_NAME]. All rights reserved. Designed for the road traveller.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/919999999999?text=Hi!" target="_blank" class="fl-wa" title="WhatsApp">💬</a>
+<a href="tel:+919999999999" class="fl-call" id="flCall" title="Call">📞</a>
+
+<div id="mbb">
+  <div class="mbb-in">
+    <a href="https://wa.me/919999999999" target="_blank" class="mbb-b mbb-wa"><span>💬</span>WhatsApp</a>
+    <a href="tel:+919999999999" class="mbb-b mbb-tel"><span>📞</span>Call Now</a>
+    <a href="#menu" class="mbb-b mbb-men"><span>📋</span>Menu</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
