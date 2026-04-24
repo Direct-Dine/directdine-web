@@ -1774,3 +1774,8 @@ nav:not(.scrolled) .nav-links a {
 .btn-nav:hover {
     background-color: var(--primary-hover);
 }
+#hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
