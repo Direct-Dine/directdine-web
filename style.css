@@ -218,21 +218,21 @@ nav:not(.scrolled) .nav-links a       { color: var(--text-light); }
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 120px 24px 60px;
+    /* Extra bottom padding reserves space for the character at bottom-left */
+    padding: 120px 24px 100px;
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    grid-template-columns: minmax(0, 55%) minmax(0, 45%);
     align-items: center;
-    gap: 60px;
-    /* Columns are hard-bounded by minmax(0,...) so neither can bleed into the other */
+    gap: 48px;
 }
 
 /* Hero text colours */
 #hero h1, #hero h2, #hero h3, #hero p { color: var(--text-light); }
 #hero .hero-content p                  { color: rgba(249,245,240,0.85); }
 
-.hero-content    { position: relative; z-index: 2; min-width: 0; /* prevent grid blowout */ }
-.hero-content h1 { font-size: clamp(2.4rem, 4.5vw, 4.5rem); margin-bottom: 20px; max-width: 100%; word-break: break-word; }
-.hero-content p  { font-size: 1.1rem; margin-bottom: 40px; max-width: 440px; }
+.hero-content    { position: relative; z-index: 2; min-width: 0; }
+.hero-content h1 { font-size: clamp(2.2rem, 4vw, 4rem); margin-bottom: 20px; max-width: 100%; word-break: break-word; }
+.hero-content p  { font-size: 1.05rem; margin-bottom: 40px; max-width: 400px; }
 .hero-buttons    { display: flex; gap: 16px; flex-wrap: wrap; }
 
 .badge {
@@ -248,24 +248,28 @@ nav:not(.scrolled) .nav-links a       { color: var(--text-light); }
 }
 
 /* ── 9. HERO CAROUSEL ──────────────────────────────────────── */
+/*
+   Carousel is ~17% smaller than original (260→216, 380→316, translateZ 300→250).
+   padding-left shifts the rotation centre rightward so the left-swinging
+   cards never reach the text column. min-width:0 hard-caps the grid column.
+*/
 .hero-carousel-wrapper {
     position: relative;
     z-index: 2;
     width: 100%;
-    min-width: 0;         /* prevent grid column blowout */
-    height: 500px;
-    perspective: 1200px;
+    min-width: 0;
+    height: 420px;
+    perspective: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: visible;
-    /* Padding creates breathing room for translateZ(300px) cards
-       so they never physically overlap the left text column */
-    padding-left: 40px;
+    padding-left: 32px;
 }
 
 .carousel {
-    width: 260px; height: 380px;
+    width: 216px;
+    height: 316px;
     position: relative;
     transform-style: preserve-3d;
     animation: rotateLoop 28s linear infinite;
@@ -282,7 +286,7 @@ nav:not(.scrolled) .nav-links a       { color: var(--text-light); }
     position: absolute;
     inset: 0;
     transform-origin: center;
-    transform: rotateY(calc(var(--i) * 60deg)) translateZ(300px);
+    transform: rotateY(calc(var(--i) * 60deg)) translateZ(250px);
     background: var(--bg-white);
     border: 1px solid rgba(62,39,35,0.1);
     border-radius: 12px;
@@ -294,7 +298,7 @@ nav:not(.scrolled) .nav-links a       { color: var(--text-light); }
 .carousel-item:hover {
     border-color: var(--primary);
     box-shadow: 0 0 20px rgba(156,102,68,0.25);
-    transform: rotateY(calc(var(--i) * 60deg)) translateZ(320px) scale(1.05);
+    transform: rotateY(calc(var(--i) * 60deg)) translateZ(266px) scale(1.05);
 }
 
 .carousel-item iframe {
@@ -309,16 +313,18 @@ nav:not(.scrolled) .nav-links a       { color: var(--text-light); }
 
 /* ── 10. FLOATING CHEF CHARACTER ───────────────────────────── */
 /*
-   Character is absolute to #hero (position:relative).
-   z-index: 10 ensures it's above overlay (0), hero-inner (1),
-   hero-content (2), carousel (2), and carousel-items.
-   overflow:visible on #hero ensures it's never clipped.
+   Positioned absolute to #hero (overflow:visible).
+   Left-aligned with 20px safe margin from viewport edge.
+   Bottom at 0 so it sits at hero floor without going off-screen.
+   z-index 10 keeps it above all hero content layers.
+   It lives in the bottom-left corner — the text column's
+   left gutter — so it never reaches the carousel column.
 */
 .hero-character {
     position: absolute;
     left: 20px;
     bottom: 0;
-    width: 90px;
+    width: 78px;
     height: auto;
     pointer-events: none;
     z-index: 10;
@@ -329,12 +335,12 @@ nav:not(.scrolled) .nav-links a       { color: var(--text-light); }
 
 .hero-character-bubble {
     position: absolute;
-    left: 100px;
-    bottom: 60px;
+    left: 90px;
+    bottom: 52px;
     background: #fff;
     border-radius: 14px 14px 14px 4px;
-    padding: 8px 14px;
-    font-size: 0.78rem;
+    padding: 7px 12px;
+    font-size: 0.74rem;
     font-weight: 700;
     color: var(--text-main);
     white-space: nowrap;
@@ -760,12 +766,12 @@ footer { padding: 60px 0 30px; border-top: 1px solid rgba(62,39,35,0.1); }
 /* ≥ 1400px */
 @media (min-width: 1400px) {
     .container, .nav-container { max-width: 1320px; }
-    .hero-inner                { max-width: 1320px; padding: 140px 40px 80px; gap: 80px; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
-    .hero-content h1           { font-size: 5rem; }
-    .hero-carousel-wrapper     { height: 560px; padding-left: 40px; }
-    .carousel                  { width: 290px; height: 420px; }
-    .carousel-item             { transform: rotateY(calc(var(--i) * 60deg)) translateZ(340px); }
-    .carousel-item:hover       { transform: rotateY(calc(var(--i) * 60deg)) translateZ(360px) scale(1.05); }
+    .hero-inner                { max-width: 1320px; padding: 140px 40px 120px; gap: 64px; grid-template-columns: minmax(0, 55%) minmax(0, 45%); }
+    .hero-content h1           { font-size: 4.8rem; }
+    .hero-carousel-wrapper     { height: 480px; padding-left: 40px; }
+    .carousel                  { width: 248px; height: 362px; }
+    .carousel-item             { transform: rotateY(calc(var(--i) * 60deg)) translateZ(288px); }
+    .carousel-item:hover       { transform: rotateY(calc(var(--i) * 60deg)) translateZ(304px) scale(1.05); }
 }
 
 /* Hide decorative characters at narrow viewports */
@@ -775,20 +781,18 @@ footer { padding: 60px 0 30px; border-top: 1px solid rgba(62,39,35,0.1); }
 /* Tablet 641px – 991px */
 @media (min-width: 641px) and (max-width: 991px) {
     .section-padding           { padding: 70px 0; }
-    .hero-inner                {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 120px 24px 60px;
-        gap: 36px;
-    }
-    .hero-content p            { margin: 0 auto 32px; max-width: 520px; }
+    /* Single column stacked — no overlap possible */
+    .hero-inner                { grid-template-columns: 1fr; text-align: center; padding: 110px 32px 80px; gap: 32px; }
+    .hero-content p            { margin: 0 auto 32px; max-width: 480px; }
     .hero-buttons              { justify-content: center; }
-    .hero-carousel-wrapper     { height: 380px; perspective: 900px; padding-left: 0; }
-    .carousel                  { width: 200px; height: 310px; }
-    .carousel-item             { transform: rotateY(calc(var(--i) * 60deg)) translateZ(200px); }
-    .carousel-item:hover       { transform: rotateY(calc(var(--i) * 60deg)) translateZ(218px) scale(1.05); }
-    .hero-character            { left: 16px; bottom: 0; width: 72px; z-index: 10; }
-    .hero-character-bubble     { left: 80px; bottom: 52px; font-size: 0.68rem; padding: 5px 9px; }
+    /* Carousel: smaller size + no left padding (no text beside it) */
+    .hero-carousel-wrapper     { height: 340px; perspective: 800px; padding-left: 0; }
+    .carousel                  { width: 180px; height: 264px; }
+    .carousel-item             { transform: rotateY(calc(var(--i) * 60deg)) translateZ(180px); }
+    .carousel-item:hover       { transform: rotateY(calc(var(--i) * 60deg)) translateZ(192px) scale(1.04); }
+    /* Character: smaller, bottom-left, well inside viewport */
+    .hero-character            { left: 16px; bottom: 0; width: 62px; }
+    .hero-character-bubble     { left: 72px; bottom: 46px; font-size: 0.64rem; padding: 5px 8px; }
     .about-grid                { grid-template-columns: 1fr; gap: 40px; }
     .about-text                { order: 2; text-align: center; }
     .about-image               { order: 1; }
@@ -821,17 +825,20 @@ footer { padding: 60px 0 30px; border-top: 1px solid rgba(62,39,35,0.1); }
     .nav-links, .btn-nav       { display: none; }
     .hamburger                 { display: block; }
     #hero                      { min-height: 100svh; }
-    .hero-inner                { grid-template-columns: 1fr; text-align: center; padding: 100px 16px 48px; gap: 32px; }
-    .hero-content h1           { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+    /* Single column, no character (avoids overlap with buttons) */
+    .hero-inner                { grid-template-columns: 1fr; text-align: center; padding: 96px 16px 48px; gap: 28px; }
+    .hero-content h1           { font-size: clamp(1.75rem, 6.5vw, 2.4rem); }
     .hero-content p            { font-size: 0.95rem; margin: 0 auto 28px; max-width: 100%; }
     .hero-buttons              { flex-direction: column; align-items: center; gap: 12px; }
     .hero-buttons .btn         { width: 100%; max-width: 300px; }
+    /* Hide character on mobile — no safe space in single-column layout */
     .hero-character,
     .hero-character-bubble     { display: none; }
-    .hero-carousel-wrapper     { height: 280px; perspective: 600px; padding-left: 0; }
-    .carousel                  { width: 140px; height: 220px; }
-    .carousel-item             { transform: rotateY(calc(var(--i) * 60deg)) translateZ(140px); border-radius: 8px; }
-    .carousel-item:hover       { transform: rotateY(calc(var(--i) * 60deg)) translateZ(154px) scale(1.04); }
+    /* Carousel sized to fit comfortably inside mobile viewport */
+    .hero-carousel-wrapper     { height: 260px; perspective: 560px; padding-left: 0; }
+    .carousel                  { width: 130px; height: 192px; }
+    .carousel-item             { transform: rotateY(calc(var(--i) * 60deg)) translateZ(130px); border-radius: 8px; }
+    .carousel-item:hover       { transform: rotateY(calc(var(--i) * 60deg)) translateZ(140px) scale(1.04); }
     .about-grid                { grid-template-columns: 1fr; gap: 32px; }
     .about-text                { order: 2; text-align: center; }
     .about-text h2             { font-size: 1.8rem; }
@@ -863,11 +870,11 @@ footer { padding: 60px 0 30px; border-top: 1px solid rgba(62,39,35,0.1); }
 
 /* Very small phones ≤ 375px */
 @media (max-width: 375px) {
-    .hero-content h1           { font-size: 1.9rem; }
-    .hero-carousel-wrapper     { height: 270px; perspective: 600px; }
-    .carousel                  { width: 140px; height: 220px; }
-    .carousel-item             { transform: rotateY(calc(var(--i) * 60deg)) translateZ(140px); }
-    .carousel-item:hover       { transform: rotateY(calc(var(--i) * 60deg)) translateZ(154px) scale(1.04); }
+    .hero-content h1           { font-size: 1.65rem; }
+    .hero-carousel-wrapper     { height: 230px; perspective: 480px; }
+    .carousel                  { width: 112px; height: 166px; }
+    .carousel-item             { transform: rotateY(calc(var(--i) * 60deg)) translateZ(112px); }
+    .carousel-item:hover       { transform: rotateY(calc(var(--i) * 60deg)) translateZ(120px) scale(1.04); }
     .phone-float-wrapper       { height: 310px; }
     .phone-frame               { width: 155px; height: 310px; border-radius: 28px; }
     .service-card              { padding: 22px 16px; }
