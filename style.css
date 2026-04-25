@@ -219,11 +219,11 @@ nav:not(.scrolled) .nav-links a       { color: var(--text-light); }
     max-width: 1200px;
     margin: 0 auto;
     /* Extra bottom padding reserves space for the character at bottom-left */
-    padding: 120px 24px 100px;
+    padding: 120px 16px 100px;
     display: grid;
-    grid-template-columns: minmax(0, 55%) minmax(0, 45%);
+    grid-template-columns: minmax(0, 52%) minmax(0, 48%);
     align-items: center;
-    gap: 48px;
+    gap: 64px;
 }
 
 /* Hero text colours */
