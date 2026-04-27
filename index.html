@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Dine | Grow Your Restaurant Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">DIRECT <span>DINE</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#demos">Demos</a></li>
+            </ul>
+           
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <div class="close-menu"><i class="fas fa-times"></i></div>
+        <ul class="mobile-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#demos">Demos</a></li>
+            <li><a href="#" class="btn btn-mobile" id="mobileBookBtn">Book Appointment</a></li>
+        </ul>
+    </div>
+
+    <section id="hero">
+
+    <div class="hero-inner">
+
+        <div class="hero-content reveal slide-up">
+            
+            <h1>Grow Your <span class="highlight">Restaurant</span> Online</h1>
+            <p>We build breathtaking, mobile-friendly websites for cafes and restaurants that turn online visitors into dine-in customers.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary" id="heroBookBtn">
+                    Book Appointment <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#demos" class="btn btn-outline">View Demos</a>
+            </div>
+        </div>
+        
+        <div class="hero-carousel-wrapper desktop-only reveal fade-in delay-1">
+            <div class="carousel">
+                <div class="carousel-item" style="--i:0;">
+                    <a href="cafe/index.html" target="_blank" class="carousel-link"></a>
+                    <iframe src="cafe/index.html" scrolling="no"></iframe>
+                </div>
+                <div class="carousel-item" style="--i:1;">
+                    <a href="HelloMenu/index.html" target="_blank" class="carousel-link"></a>
+                    <iframe src="HelloMenu/index.html" scrolling="no"></iframe>
+                </div>
+                <div class="carousel-item" style="--i:2;">
+                    <a href="HelloMenu2/index.html" target="_blank" class="carousel-link"></a>
+                    <iframe src="HelloMenu2/index.html" scrolling="no"></iframe>
+                </div>
+                <div class="carousel-item" style="--i:3;">
+                    <a href="HelloMenu3/index.html" target="_blank" class="carousel-link"></a>
+                    <iframe src="HelloMenu3/index.html" scrolling="no"></iframe>
+                </div>
+                <div class="carousel-item" style="--i:4;">
+                    <a href="cafe2/index.html" target="_blank" class="carousel-link"></a>
+                    <iframe src="cafe2/index.html" scrolling="no"></iframe>
+                </div>
+                <div class="carousel-item" style="--i:5;">
+                    <a href="cafe3/index.html" target="_blank" class="carousel-link"></a>
+                    <iframe src="cafe3/index.html" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-character-mobile mobile-only">
+            <div class="hero-mobile-char-wrap">
+                <div class="hero-char-bubble visible">Let’s build your digital presence.</div>
+                <svg viewBox="0 0 140 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="hero-mobile-svg">
+                    <!-- Body -->
+                    <ellipse cx="70" cy="158" rx="34" ry="42" fill="#C49A6C"/>
+                    <path d="M50 132 Q70 148 90 132 L90 165 Q70 174 50 165Z" fill="#A67C52"/>
+                    <!-- Chef hat -->
+                    <ellipse cx="70" cy="64" rx="28" ry="8" fill="#F9F5F0"/>
+                    <rect x="46" y="40" width="48" height="28" rx="8" fill="#F9F5F0"/>
+                    <ellipse cx="70" cy="40" rx="24" ry="10" fill="#fff"/>
+                    <!-- Head -->
+                    <circle cx="70" cy="88" r="26" fill="#F5C8A0"/>
+                    <!-- Eyes -->
+                    <circle cx="61" cy="86" r="5.5" fill="#2C1A12"/>
+                    <circle cx="79" cy="86" r="5.5" fill="#2C1A12"/>
+                    <circle cx="62.5" cy="84.5" r="2.2" fill="white"/>
+                    <circle cx="80.5" cy="84.5" r="2.2" fill="white"/>
+                    <!-- Smile -->
+                    <path d="M61 98 Q70 108 79 98" stroke="#8B5A2B" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+                    <!-- Arms -->
+                    <path d="M50 134 Q24 120 18 100" stroke="#C49A6C" stroke-width="13" fill="none" stroke-linecap="round"/>
+                    <circle cx="18" cy="96" r="9" fill="#F5C8A0"/>
+                    <ellipse cx="10" cy="92" rx="14" ry="5" fill="#F9F5F0"/>
+                    <ellipse cx="10" cy="90" rx="11" ry="4" fill="#fff"/>
+                    <circle cx="10" cy="88" r="5" fill="#C49A6C" opacity="0.8"/>
+                    <path d="M90 134 Q116 122 122 108" stroke="#C49A6C" stroke-width="13" fill="none" stroke-linecap="round"/>
+                    <circle cx="122" cy="104" r="9" fill="#F5C8A0"/>
+                    <path d="M118 100 Q122 94 126 100 Q128 106 122 108" stroke="#8B5A2B" stroke-width="1.8" fill="none"/>
+                    <!-- Legs -->
+                    <path d="M58 196 Q55 206 50 210" stroke="#2C1A12" stroke-width="11" fill="none" stroke-linecap="round"/>
+                    <path d="M82 196 Q85 206 90 210" stroke="#2C1A12" stroke-width="11" fill="none" stroke-linecap="round"/>
+                    <ellipse cx="48" cy="210" rx="10" ry="5" fill="#1A0E08"/>
+                    <ellipse cx="92" cy="210" rx="10" ry="5" fill="#1A0E08"/>
+                    <!-- Sparkles -->
+                    <text x="108" y="80" font-size="13" fill="#C49A6C" opacity="0.8">✦</text>
+                    <text x="18"  y="72" font-size="10" fill="#C49A6C" opacity="0.6">✦</text>
+                    <text x="112" y="148" font-size="11" fill="#9C6644" opacity="0.5">✦</text>
+                    <text x="28"  y="160" font-size="8"  fill="#C49A6C" opacity="0.45">✦</text>
+                </svg>
+            </div>
+            <div class="hero-mobile-badge">
+                <span class="hero-mobile-badge-dot"></span> 50+ restaurants served
+            </div>
+        </div>
+
+    </div>
+
+    </section>
+
+    <section id="about" class="section-padding about-section-pos">
+        <div class="container about-grid">
+            <div class="about-text reveal slide-right">
+                <h4 class="section-subtitle">Who We Are</h4>
+                <h2>We turn hungry scrollers into <span class="highlight">loyal diners.</span></h2>
+                <p>Direct Dine helps cafes and restaurants get more customers online. We create modern, lightning-fast, mobile-friendly websites designed to increase your visibility and customer engagement.</p>
+                <p>No technical jargon. Just beautiful websites that make your food look irresistible and make booking a table effortless.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-label">Online Presence</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Mobile Optimized</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image reveal slide-left delay-1">
+                <div class="phone-float-wrapper">
+                    <div class="phone-frame">
+
+                        <div class="phone-pill"></div>
+                        <div class="phone-btn phone-btn--vol-up"></div>
+                        <div class="phone-btn phone-btn--vol-dn"></div>
+                        <div class="phone-btn phone-btn--power"></div>
+
+                        <div class="phone-screen">
+
+                            <div class="ps-statusbar">
+                                <span class="ps-time">9:41</span>
+                                <span class="ps-icons">
+                                    <i class="fas fa-signal"></i>
+                                    <i class="fas fa-wifi"></i>
+                                    <i class="fas fa-battery-full"></i>
+                                </span>
+                            </div>
+
+                            <div class="ps-scroll-track">
+                                <div class="ps-scroll-content">
+
+                                    <div class="ps-hero">
+                                        <div class="ps-hero-nav">
+                                            <span class="ps-logo-dot"></span>
+                                            <span class="ps-logo-text">ARTISAN</span>
+                                            <span class="ps-nav-dots">
+                                                <span></span><span></span><span></span>
+                                            </span>
+                                        </div>
+                                        <div class="ps-hero-img">
+                                            <div class="ps-hero-overlay"></div>
+                                            <div class="ps-hero-badge">⭐ 4.9 Rating</div>
+                                        </div>
+                                        <div class="ps-hero-copy">
+                                            <p class="ps-eyebrow">Est. 2019 · Mumbai</p>
+                                            <h2 class="ps-h1">Crafted with <br><span>Passion</span></h2>
+                                            <p class="ps-sub">Premium café experience, every single cup.</p>
+                                            <div class="ps-cta-row">
+                                                <button class="ps-btn ps-btn--fill ps-btn--pulse">Reserve a Table</button>
+                                                <button class="ps-btn ps-btn--ghost">Our Menu</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ps-section ps-menu-section">
+                                        <p class="ps-section-label">TODAY'S PICKS</p>
+                                        <h3 class="ps-section-title">Our Bestsellers</h3>
+                                        <div class="ps-menu-grid">
+                                            <div class="ps-menu-card ps-card--hover">
+                                                <div class="ps-menu-img ps-img--latte"></div>
+                                                <div class="ps-menu-body">
+                                                    <span class="ps-menu-tag">Popular</span>
+                                                    <p class="ps-menu-name">Signature Latte</p>
+                                                    <div class="ps-menu-footer">
+                                                        <span class="ps-price">₹280</span>
+                                                        <button class="ps-add-btn">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ps-menu-card">
+                                                <div class="ps-menu-img ps-img--pastry"></div>
+                                                <div class="ps-menu-body">
+                                                    <span class="ps-menu-tag ps-tag--new">New</span>
+                                                    <p class="ps-menu-name">Butter Croissant</p>
+                                                    <div class="ps-menu-footer">
+                                                        <span class="ps-price">₹180</span>
+                                                        <button class="ps-add-btn">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ps-menu-card">
+                                                <div class="ps-menu-img ps-img--matcha"></div>
+                                                <div class="ps-menu-body">
+                                                    <span class="ps-menu-tag ps-tag--veg">Veg</span>
+                                                    <p class="ps-menu-name">Matcha Bowl</p>
+                                                    <div class="ps-menu-footer">
+                                                        <span class="ps-price">₹320</span>
+                                                        <button class="ps-add-btn">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ps-menu-card">
+                                                <div class="ps-menu-img ps-img--cold"></div>
+                                                <div class="ps-menu-body">
+                                                    <span class="ps-menu-tag">Cold</span>
+                                                    <p class="ps-menu-name">Cold Brew</p>
+                                                    <div class="ps-menu-footer">
+                                                        <span class="ps-price">₹260</span>
+                                                        <button class="ps-add-btn">+</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ps-section ps-gallery-section">
+                                        <p class="ps-section-label">AMBIENCE</p>
+                                        <h3 class="ps-section-title">Visit Us</h3>
+                                        <div class="ps-gallery-strip">
+                                            <div class="ps-gal-item ps-gal--a"></div>
+                                            <div class="ps-gal-item ps-gal--b"></div>
+                                            <div class="ps-gal-item ps-gal--c"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ps-section ps-review-section">
+                                        <p class="ps-section-label">REVIEWS</p>
+                                        <div class="ps-review-card">
+                                            <div class="ps-review-stars">★★★★★</div>
+                                            <p class="ps-review-text">"Hands down the best café in the city. The latte art is insane!"</p>
+                                            <div class="ps-reviewer">
+                                                <div class="ps-reviewer-avatar"></div>
+                                                <span>Priya M. &mdash; Google Review</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ps-section ps-book-section">
+                                        <p class="ps-section-label">RESERVATIONS</p>
+                                        <h3 class="ps-section-title">Book a Table</h3>
+                                        <div class="ps-book-form">
+                                            <div class="ps-input-mock">
+                                                <i class="fas fa-user"></i>
+                                                <span>Your Name</span>
+                                            </div>
+                                            <div class="ps-input-mock ps-input--active">
+                                                <i class="fas fa-phone"></i>
+                                                <span>+91 98765 43210</span>
+                                                <span class="ps-cursor">|</span>
+                                            </div>
+                                            <button class="ps-btn ps-btn--fill ps-btn--full ps-btn--wa">
+                                                <i class="fab fa-whatsapp"></i> Book on WhatsApp
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="ps-footer">
+                                        <span class="ps-logo-text">ARTISAN CAFÉ</span>
+                                        <p>© 2026 · All rights reserved</p>
+                                        <div class="ps-footer-icons">
+                                            <i class="fab fa-instagram"></i>
+                                            <i class="fab fa-facebook"></i>
+                                            <i class="fab fa-whatsapp"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="ps-loop-spacer"></div>
+
+                                </div></div><div class="phone-home-bar"></div>
+
+                        </div></div><div class="phone-glow"></div>
+                </div></div>
+        </div>
+
+        
+    </section>
+
+    <section id="services" class="section-padding bg-dark">
+        
+        <div class="services-bg-partitions">
+            <div class="bg-strip" style="background-image: url('bg-1.jpeg');"></div>
+            <div class="bg-strip" style="background-image: url('bg-2.jpeg');"></div>
+            <div class="bg-strip" style="background-image: url('bg-3.jpeg');"></div>
+            <div class="bg-strip" style="background-image: url('bg-4.jpeg');"></div>
+            
+            <div class="bg-overlay"></div> 
+        </div>
+
+        <div class="container text-center reveal slide-up">
+            <h4 class="section-subtitle">Our Expertise</h4>
+            <h2>Everything you need to <span class="highlight">succeed</span></h2>
+        </div>
+        <div class="container services-character-wrap">
+            <div class="services-grid">
+            <div class="service-card reveal slide-up delay-1">
+                <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+                <h3>Website Design</h3>
+                <p>Custom, high-end websites that reflect your brand's unique atmosphere and culinary style.</p>
+            </div>
+            <div class="service-card reveal slide-up delay-2">
+                <div class="icon-box"><i class="fas fa-book-open"></i></div>
+                <h3>Menu Integration</h3>
+                <p>Beautiful, easy-to-read digital menus that can be updated in seconds without developer help.</p>
+            </div>
+            <div class="service-card reveal slide-up delay-3">
+                <div class="icon-box"><i class="fas fa-calendar-check"></i></div>
+                <h3>Online Reservations</h3>
+            <p>Let guests book a table instantly from your website — no calls, no friction, no missed bookings.</p>
+            </div>
+            <div class="service-card reveal slide-up delay-4">
+                <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Mobile Optimization</h3>
+                <p>Flawless performance on all devices, ensuring customers can find you on the go.</p>
+            </div>
+        </div></div></section>
+
+    <section id="demos" class="section-padding demos-section-pos">
+        <div class="container text-center reveal slide-up">
+            <h4 class="section-subtitle">Our Work</h4>
+            <h2>Experience our <span class="highlight">Demo Sites</span></h2>
+        </div>
+        <div class="container demos-grid">
+            
+            <div class="demo-card reveal slide-up delay-1">
+                <div class="demo-image">
+                    <iframe src="cafe/index.html" scrolling="no" class="preview-frame"></iframe>
+                    <div class="demo-overlay">
+                        <a href="cafe/index.html" target="_blank" class="btn btn-primary">View Demo</a>
+                    </div>
+                </div>
+                <div class="demo-info">
+                    <h3>Restaurant Experience</h3>
+                    <p>A warm, aesthetic layout perfect for coffee shops and bakeries. Features smooth scroll reveals.</p>
+                </div>
+            </div>
+
+            <div class="demo-card reveal slide-up delay-2">
+                <div class="demo-image">
+                    <iframe src="HelloMenu/index.html" scrolling="no" class="preview-frame"></iframe>
+                    <div class="demo-overlay">
+                        <a href="HelloMenu/index.html" target="_blank" class="btn btn-primary">View Demo</a>
+                    </div>
+                </div>
+                <div class="demo-info">
+                    <h3>Restaurant Experience</h3>
+                    <p>A premium, interactive layout for fine dining. Includes an interactive menu interface.</p>
+                </div>
+            </div>
+
+            <div class="demo-card reveal slide-up delay-3">
+                <div class="demo-image">
+                    <iframe src="HelloMenu2/index.html" scrolling="no" class="preview-frame"></iframe>
+                    <div class="demo-overlay">
+                        <a href="HelloMenu2/index.html" target="_blank" class="btn btn-primary">View Demo</a>
+                    </div>
+                </div>
+                <div class="demo-info">
+                    <h3>Restaurant Experience</h3>
+                    <p>Modern elegant design tailored for contemporary restaurants and bistros.</p>
+                </div>
+            </div>
+
+            <div class="demo-card reveal slide-up delay-4">
+                <div class="demo-image">
+                    <iframe src="HelloMenu3/index.html" scrolling="no" class="preview-frame"></iframe>
+                    <div class="demo-overlay">
+                        <a href="HelloMenu3/index.html" target="_blank" class="btn btn-primary">View Demo</a>
+                    </div>
+                </div>
+                <div class="demo-info">
+                    <h3>Cafe Experience</h3>
+                    <p>Immersive layout featuring rich visuals, smooth interactions, and dynamic galleries.</p>
+                </div>
+            </div>
+
+            <div class="demo-card reveal slide-up delay-5">
+                <div class="demo-image">
+                    <iframe src="cafe2/index.html" scrolling="no" class="preview-frame"></iframe>
+                    <div class="demo-overlay">
+                        <a href="cafe2/index.html" target="_blank" class="btn btn-primary">View Demo</a>
+                    </div>
+                </div>
+                <div class="demo-info">
+                    <h3>Cafe Experience</h3>
+                    <p>Clean and minimal layout designed to highlight signature roasts and pastries.</p>
+                </div>
+            </div>
+
+            <div class="demo-card reveal slide-up delay-6">
+                <div class="demo-image">
+                    <iframe src="cafe3/index.html" scrolling="no" class="preview-frame"></iframe>
+                    <div class="demo-overlay">
+                        <a href="cafe3/index.html" target="_blank" class="btn btn-primary">View Demo</a>
+                    </div>
+                </div>
+                <div class="demo-info">
+                    <h3>Cafe Experience</h3>
+                    <p>Vibrant and energetic template designed to attract food lovers and daily visitors.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="book" class="section-padding bg-dark book-section-pos">
+        <div class="container book-container reveal fade-in">
+            <div class="book-content text-center">
+                <h2>Ready to upgrade your <span class="highlight">restaurant?</span></h2>
+                <p>Drop your details below and we'll connect with you shortly.</p>
+                <button class="btn btn-primary btn-open-modal" id="openBookModal">
+                    <i class="fas fa-calendar-check"></i> Book Appointment
+                </button>
+            </div>
+        </div>
+
+        <svg class="book-float-char" viewBox="0 0 100 155" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <ellipse cx="50" cy="115" rx="25" ry="30" fill="#C49A6C"/>
+            <path d="M36 97 Q50 108 64 97 L64 120 Q50 126 36 120Z" fill="#A67C52"/>
+            <circle cx="50" cy="60" r="24" fill="#F5C8A0"/>
+            <ellipse cx="50" cy="40" rx="22" ry="9" fill="#2C1A12"/>
+            <rect x="28" y="42" width="44" height="7" rx="3.5" fill="#2C1A12"/>
+            <circle cx="42" cy="60" r="5" fill="#2C1A12"/>
+            <circle cx="58" cy="60" r="5" fill="#2C1A12"/>
+            <circle cx="43.5" cy="58.5" r="2" fill="white"/>
+            <circle cx="59.5" cy="58.5" r="2" fill="white"/>
+            <path d="M42 70 Q50 78 58 70" stroke="#8B5A2B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M36 98 Q14 86 10 70" stroke="#C49A6C" stroke-width="11" fill="none" stroke-linecap="round"/>
+            <circle cx="10" cy="66" r="7" fill="#F5C8A0"/>
+            <rect x="3" y="44" width="14" height="22" rx="3" fill="#2C1A12"/>
+            <rect x="5" y="47" width="10" height="15" rx="1" fill="#C49A6C" opacity="0.85"/>
+            <circle cx="10" cy="54" r="5" fill="#25D366" opacity="0.9"/>
+            <text x="7.5" y="57" font-size="6" fill="white" font-weight="bold">✓</text>
+            <path d="M64 98 Q84 90 90 78" stroke="#C49A6C" stroke-width="11" fill="none" stroke-linecap="round"/>
+            <circle cx="90" cy="74" r="7" fill="#F5C8A0"/>
+            <path d="M87 70 Q90 66 93 70 Q95 74 90 76" stroke="#8B5A2B" stroke-width="1.5" fill="none"/>
+            <path d="M40 142 Q37 149 34 152" stroke="#2C1A12" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <path d="M60 142 Q63 149 66 152" stroke="#2C1A12" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <ellipse cx="32" cy="152" rx="8" ry="4" fill="#1A0E08"/>
+            <ellipse cx="67" cy="152" rx="8" ry="4" fill="#1A0E08"/>
+            <text x="93" y="68" font-size="9" fill="#25D366" opacity="0.9">✦</text>
+            <text x="0"  y="60" font-size="7" fill="#C49A6C" opacity="0.6">✦</text>
+            <text x="80" y="108" font-size="8" fill="#C49A6C" opacity="0.5">✦</text>
+        </svg>
+    </section>
+
+    <div class="modal-backdrop" id="bookModal" role="dialog" aria-modal="true" aria-label="Book Appointment">
+        <div class="modal-box">
+            <button class="modal-close" id="closeBookModal" aria-label="Close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-calendar-check"></i></div>
+                <h3>Book Appointment</h3>
+                <p>Fill in your details and we'll get back to you shortly.</p>
+            </div>
+            <form id="wa-form" class="modal-form" novalidate>
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Your Name / Restaurant Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email Address (optional)">
+                </div>
+                <div class="input-group">
+                    <textarea id="message" placeholder="Message (optional)" rows="3" style="resize:vertical;"></textarea>
+                </div>
+                <div class="modal-divider"></div>
+                <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+                <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Book Appointment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer-char-pos">
+        <div class="container footer-content text-center">
+            <h2>DIRECT <span class="highlight">DINE</span></h2>
+            <p>Elevating the hospitality industry through premium digital experiences.</p>
+            <p class="copyright">&copy; 2026 Direct Dine. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html> 
